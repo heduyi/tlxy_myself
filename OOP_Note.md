@@ -70,4 +70,4 @@
 - conda create -n XXX python=3.6：创建名称为XXX，版本为python 3.6虚拟环境
     - 安装完成后使用activate oop激活名称为oop的虚拟环境(激活成功后命令行最前面会有(oop))
     - 安装完成后使用deactivate oop不激活该虚拟环境
-    
+    - test20190122 
