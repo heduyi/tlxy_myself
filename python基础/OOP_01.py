@@ -26,7 +26,7 @@ class PythonStudent():
         return None
 
 # 实例化一个叫angus的学生，是一个具体的学生
-angus = PythonStudent
+angus = PythonStudent()
 print(angus.name)
 print(angus.age)
 print(angus.course)
