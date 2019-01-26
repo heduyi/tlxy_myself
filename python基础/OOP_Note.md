@@ -169,4 +169,42 @@
             - 子类永远在父类前面
             - 如果有多个父类，则根据继承语法中括号内的书写顺序存放
             - 如果多个类继承了同一个父类，孙子类中只会选取继承语法括号中第一个父类的父类
-            
+
+## 6.3 多态
+- 多态就是同一个对象在不同情况下有不同的状态出现。
+- 多态不是语法，而是一种设计思想。
+- 多态性：一种调用方法，不同的执行结果。
+- 多态：同一事物的多种形态，例如：水在不同温度下有液体、固体和气体。
+- [多态和多态性](https://www.cnblogs.com/luchuangao/p/6739557.html)
+
+- Mixin设计模式
+    - 主要采用多继承方式对类的功能进行扩展
+    - 主要是功能的增加，而不改变其所属的类。例如超人其实还是人，只是增加了飞和游泳的功能。
+    - [Mixin概念](https://www.zhihu.com/question/20778853)
+    - [MRO和Mixin](https://blog.csdn.net/robinjwong/article/details/48375833)
+    - [Mixin模式](https://www.cnblogs.com/xybaby/p/6484262.html)
+    - [Mixin MRO](http://runforever.github.io/2014-07-19/2014-07-19-python-mixin%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
+    - [MRO](http://xiaocong.github.io/blog/2012/06/13/python-mixin-and-mro/)
+
+    - 我们使用多继承语法来实现Mixin
+    - 使用Mixin实现多继承的时候要非常小心
+        - 首先他必须表示某一个单一的功能，而不是某个物品
+        - 职责必须单一，如果有多个功能，则必须有多个Mixin
+        - 例如：想从鸟那儿继承飞和唱歌的Mixin，则要写2个Mixin，飞Mixin和唱歌Mixin。一个Mixin对应一个功能
+        - Mixin不能依赖于子类的实现
+        - 子类即使没有继承Mixin类，也照样可以工作，只是缺少了某个功能。
+    - 优先：
+        - 使用Mixin可以在不对类进行任何修改的情况下扩展功能，一个Mixin就是一个功能
+        - 可以方便的组织和维护不同功能组件的划分
+        - 可以根据需要任意调整功能类的组合
+        - 可以避免创建很多新的类，导致类的继承混乱
+        
+# 7. 类相关函数
+- issubclass: 检查一个类是否是另一个类的子类
+- isinstance: 检查一个对象是否是一个类的实例
+- hasattr: 检测一个对象是否有某个成员
+- getattr:
+- setattr:
+- delattr:
+- dir: 获取对象的成员列表
+   
